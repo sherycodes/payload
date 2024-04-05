@@ -8,6 +8,7 @@ module.exports = {
       plugins: ['payload'],
       rules: {
         'payload/no-jsx-import-statements': 'warn',
+        'payload/no-imports-from-exports-dir': 'error',
       },
     },
     {
