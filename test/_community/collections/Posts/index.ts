@@ -18,6 +18,21 @@ export const PostsCollection: CollectionConfig = {
       name: 'richText',
       type: 'richText',
     },
+    {
+      name: 'category',
+      type: 'relationship',
+      localized: true,
+      relationTo: 'categories',
+    },
+    {
+      name: 'associatedMedia',
+      type: 'upload',
+      access: {
+        create: () => true,
+        update: () => false,
+      },
+      relationTo: mediaSlug,
+    },
     // {
     //   type: 'row',
     //   fields: [],
