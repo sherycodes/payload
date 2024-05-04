@@ -12,11 +12,13 @@ import { NavToggler } from '../Nav/NavToggler'
 import { useNav } from '../Nav/context'
 import StepNav from '../StepNav'
 import './index.scss'
+import { useAuth } from '../../utilities/Auth'
 
 const baseClass = 'app-header'
 
 export const AppHeader: React.FC = () => {
   const { t } = useTranslation()
+  const { user } = useAuth()
 
   const {
     localization,
@@ -78,14 +80,18 @@ export const AppHeader: React.FC = () => {
             {localization && (
               <LocalizerLabel ariaLabel="invisible" className={`${baseClass}__localizer-spacing`} />
             )}
-            <Link
+            {/* <Link
               aria-label={t('authentication:account')}
               className={`${baseClass}__account`}
               tabIndex={0}
               to={`${adminRoute}/account`}
             >
               <Account />
-            </Link>
+            </Link> */}
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              {user.email}
+              {user.name}
+            </div>
           </div>
         </div>
       </div>
