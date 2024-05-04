@@ -281,3 +281,6 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows,webstorm,sublimetext,visualstudiocode
 
 /build
+temp_auto_push.bat
+temp_interactive_push.bat
+branch_structure.json

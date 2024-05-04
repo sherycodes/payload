@@ -7,6 +7,7 @@ const Users: CollectionConfig = {
     useAsTitle: 'email',
   },
   fields: [
+    { field: 'name', type: 'text', required: true },
     // Email added by default
     // Add more fields as needed
   ],
